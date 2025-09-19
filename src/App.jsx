@@ -1,18 +1,20 @@
 
+import { useState } from 'react';
 import './App.css'
 import Button from './components/Button/Button.jsx'
 
 function App() {
-  
+
+  const [count, setCount] = useState(0);
   const handleClick = () => {
-    console.log('Button clicked')
+    setCount(count + 1);
   }
 
   return (
     <>
       <h1>Hello World</h1>
-      <Button type="button" disabled={false} onClick={handleClick}>
-        <span>ボタン</span>
+      <Button type="button" disabled={false} onClick={handleClick} >
+        カウント：{count}
       </Button>
     </>
   )
