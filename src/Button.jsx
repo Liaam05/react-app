@@ -1,12 +1,12 @@
 function Button(props) {
 
-    const { type, disabled } = props;
+    const { type, disabled, children, onClick } = props;
 
     
 
     return (
-        <button type={type} disabled={disabled}>
-            クリック
+        <button type={type} disabled={disabled} onClick={onClick}>
+            {children}
         </button>
     )
 }
