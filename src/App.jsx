@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import './App.css'
 import Button from './components/Button/Button.jsx'
+import Display from './components/Display/Display.jsx';
 
 function App() {
 
@@ -14,8 +15,9 @@ function App() {
     <>
       <h1>Hello World</h1>
       <Button type="button" disabled={false} onClick={handleClick} >
-        カウント：{count}
+        クリック！
       </Button>
+      <Display count={count} />
     </>
   )
 }
