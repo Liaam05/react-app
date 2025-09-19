@@ -1,3 +1,5 @@
+import style from './Button.module.css';
+
 function Button(props) {
 
     const { type, disabled, children, onClick } = props;
@@ -5,7 +7,7 @@ function Button(props) {
     
 
     return (
-        <button type={type} disabled={disabled} onClick={onClick}>
+        <button className={style.button} type={type} disabled={disabled} onClick={onClick}>
             {children}
         </button>
     )
