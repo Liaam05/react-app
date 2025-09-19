@@ -5,11 +5,9 @@ function Display(props) {
     const [text, setText] = useState("ちょいとおまち...");
 
     useEffect(() => {
-        setTimeout(() => {
-            setText(`カウント：${props.count}`);
-        }, 2000);
+        setText(`カウント：${props.count}`);
 
-    }, [])
+    }, [props.count]);
 
     return (
         <div>
